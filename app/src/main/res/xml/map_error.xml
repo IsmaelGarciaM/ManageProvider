@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="10">password_digit</entry>
+    <entry key="11">password_case</entry>
+    <entry key="12">password_length</entry>
+    <entry key="13">data_empty</entry>
+    <entry key="14">email_invalid</entry>
+</map>

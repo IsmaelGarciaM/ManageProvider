@@ -1,0 +1,89 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ismael.manageproductsprovider.ManageInvoiceFragment">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_menu_add" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/relDataInvoice">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_invoice_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Name">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameInvoice"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDirPhar"
+            android:text="Pharmacy"
+            android:textSize="18sp"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_below="@id/til_invoice_name"/>
+        <Spinner
+            android:id="@+id/spn_invoice_pharmacy"
+            android:layout_width="300dp"
+            android:layout_toRightOf="@id/txtDirPhar"
+            android:textAlignment="textEnd"
+            android:layout_below="@id/til_invoice_name"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_invoice_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/spn_invoice_pharmacy"
+            android:hint="Date">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateInvoice"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/invoiceLinesList"
+            android:layout_below="@id/til_invoice_date">
+
+        </ListView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSaveInvoice"
+            android:layout_below="@+id/invoiceLinesList"
+            android:layout_centerHorizontal="true"
+            android:text="Save"
+            />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+</ScrollView>

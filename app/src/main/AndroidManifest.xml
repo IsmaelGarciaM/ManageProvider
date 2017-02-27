@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ismael.manageproductsprovider">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".ManageProductApplication">
+
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="com.ismael.manageproductsprovider"
+            android:name=".provider.ManageProductsContentProvider"/>
+        
+        <activity android:name=".AccountSettingsActivity"></activity>
+        <activity android:name=".GeneralSettingsActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".SignupActivity"></activity>
+        <service android:name=".InvoiceService"></service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ismael.manageproductsprovider.ManageProductFragment">
+
+    <ImageView
+        android:layout_width="@dimen/img_width"
+        android:layout_height="@dimen/img_height"
+        android:src="@drawable/caja_medicamentos"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imgMedicine"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyName"
+        android:layout_toEndOf="@id/imgMedicine"
+        android:layout_toRightOf="@id/imgMedicine">
+
+
+        <TextView
+            android:text="@string/txvName"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvName" />
+
+        <EditText
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgMedicine"
+        android:id="@+id/lyDesc">
+
+
+        <TextView
+            android:text="@string/txvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvDesc" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtDesc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyDesc"
+        android:id="@+id/lyBrand">
+
+
+        <TextView
+            android:text="@string/txvBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvBrand" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtBrand" />
+        <Spinner android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/categorySpin"
+            ></Spinner>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyBrand"
+        android:id="@+id/lyDosage">
+
+
+        <TextView
+            android:text="@string/txvDosage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvDosage" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtDosage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyDosage"
+        android:id="@+id/lyStock">
+
+
+        <TextView
+            android:text="@string/txvStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvStock" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/edtStock" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyStock"
+        android:id="@+id/lyPrice">
+
+
+        <TextView
+            android:text="@string/txvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvPrice" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/edtPrice" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyPrice">
+        <include layout="@layout/btnadd"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/action_products"
+            android:icon="@drawable/ic_action_product"
+            android:title="@string/products"/>
+        <item android:id="@+id/action_chemist"
+            android:icon="@drawable/ic_action_chemist"
+            android:title="@string/chemists"/>
+        <item android:id="@+id/action_sale"
+            android:icon="@drawable/ic_action_sale"
+            android:title="@string/sale"/>
+        <item android:id="@+id/action_category"
+            android:icon="@drawable/ic_action_product"
+            android:title="@string/category"/>
+    </group>
+    <item android:title="@string/settings">
+        <menu>
+            <item android:id="@+id/action_settings_account"
+                android:icon="@drawable/ic_action_settings"
+                android:title="@string/action_settings_account"/>
+            <item android:id="@+id/action_settings"
+                android:icon="@drawable/ic_action_settings"
+                android:title="@string/action_settings_general"/>
+        </menu>
+    </item>
+</menu>

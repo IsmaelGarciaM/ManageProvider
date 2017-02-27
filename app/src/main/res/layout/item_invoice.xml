@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_invoice_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invoice"
+            android:id="@+id/invoice_"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+
+        <TextView
+            android:id="@+id/tv_invoice_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/invoice_"
+            android:text="TextView"
+            android:layout_alignBaseline="@id/invoice_"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:layout_below="@id/invoice_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/dirphar"
+            android:id="@+id/dirphar_"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+
+
+        <TextView
+            android:id="@+id/tv_invoice_pharmacy"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/dirphar_"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_invoice_name"
+            android:layout_margin="5dp"
+            android:text="TextView"
+            android:layout_alignBaseline="@id/dirphar_"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dateinv"
+            android:id="@+id/dateinv_"
+            android:layout_below="@id/dirphar_"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/tv_invoice_date"
+            android:layout_below="@id/tv_invoice_pharmacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/dateinv_"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/dateinv_"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    </RelativeLayout>
+
+</LinearLayout>
